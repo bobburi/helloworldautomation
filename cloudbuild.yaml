@@ -1,0 +1,9 @@
+options:
+  logging: CLOUD_LOGGING_ONLY  # or NONE, if you don't want logs to be stored
+
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/sonorous-saga-427507-v9/helloworld-app', '.']
+
+images:
+  - 'gcr.io/sonorous-saga-427507-v9/helloworld-app'
